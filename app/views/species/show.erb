@@ -1,0 +1,9 @@
+<div class = "container">
+  <h1> Choose Species </h1>
+  <ul>
+      <%@species.each do |family| %>
+        <li><a href = "/locations/<%=@location.id%>/animals"><%=family.species_name%></a>
+        </li>
+      <%end%>
+  </ul>
+</div>
