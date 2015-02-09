@@ -14,13 +14,16 @@ Breed.create(breed_name: "Bugs", species_id: 3)
 Breed.create(breed_name: "Dwarf", species_id: 3)
 Breed.create(breed_name: "Cottontail", species_id: 3)
 
+breeds = Breed.all
+
 Location.create(location_name: "Anti-Cruelty Society", state: "IL")
 Location.create(location_name: "The Puppy Place", state: "NY")
 Location.create(location_name: "The Rabbit Hole", state: "WA")
 
 30.times do
   post = Post.create(location_id: [1,2,3].sample)
-  Animal.create(name: Faker::Name.first_name, age: rand(0..7), sex: ["M", "F"].sample, adoption_fee: rand(95..200), intake_date: Faker::Date.backward(31), location_id: post.location_id, breed_id: (1..9).to_a.sample, post_id: post.id)
+  breed = breeds.sample
+  Animal.create(name: Faker::Name.first_name, age: rand(0..7), sex: ["M", "F"].sample, adoption_fee: rand(95..200), intake_date: Faker::Date.backward(31), location: post.location, breed: breed, post: post, picture: Faker::Avatar.image)
 end
 
 

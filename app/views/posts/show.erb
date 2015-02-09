@@ -1,0 +1,15 @@
+<div class = "container">
+  <h1> Here is <%=@animal.name%> </h1>
+  <ul style= "list-style:none">
+      <li><img src="<%=@animal.picture%>"></li>
+      <li>Animal id: <%=@animal.id%></li>
+      <li>Age: <%=@animal.age%></li>
+      <li>Species: <%=@animal.breed.species.species_name%></li>
+      <li>Breed: <%=@animal.breed.breed_name%></li>
+      <li>Gender: <%=@animal.sex%></li>
+      <li>Location: <%=@animal.location.location_name%>, <%=@animal.location.state%></li>
+      <li>Intake-Date: <%=@animal.intake_date%></li>
+      <li>Adoption Price: <%=@animal.adoption_fee%></li>
+
+  </ul>
+</div>
