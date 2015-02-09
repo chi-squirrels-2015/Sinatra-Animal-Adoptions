@@ -1,0 +1,9 @@
+<div class = "container">
+  <h1> Choose an Animal to see their info! </h1>
+  <ul>
+      <%@animals.each do |animal| %>
+        <li><a href = "location/<%=@location.id%>/animals/<%=animal.id%>"><%=animal.name%></a>
+        </li>
+      <%end%>
+  </ul>
+</div>

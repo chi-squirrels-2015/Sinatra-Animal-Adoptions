@@ -18,6 +18,6 @@ gem 'rake'
 gem 'shotgun'
 
 group :test do
-  gem 'faker'
+  gem 'faker', "~> 1.4.3"
   gem 'rspec'
 end
